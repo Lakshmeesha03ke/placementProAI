@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="./manifest.json">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>PlacePro AI – Smart Placement Companion</title>
@@ -1626,6 +1627,19 @@ window.showFAQ=showFAQ;
 // Hook into initApp
 const _origInit = (typeof initApp==='function')?initApp:null;
 window.initApp = function(){ if(_origInit) _origInit(); renderFAQs(); };
+</script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./service-worker.js")
+        .then(function (registration) {
+          console.log("Service Worker registered:", registration);
+        })
+        .catch(function (error) {
+          console.log("Service Worker failed:", error);
+        });
+    });
+  }
 </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
-  "name": "PlaceProAI",
-  "short_name": "PlaceProAI",
-  "start_url": ".",
+  "name": "PlaceProAI-APP",
+  "short_name": "PlaceProAI_APP",
+  "start_url": "./?v=2",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
